@@ -1,16 +1,56 @@
 {
     "name": "codingmatters/employee-service-repository",
+    "type": "project",
     "authors": [
-        
+        {
+            "name": "Gab Amba",
+            "email": "gamba@gabbydgab.com",
+            "homepage": "http://www.gabbydgab.com/"
+        }
     ],
+    "autoload": {
+        "psr-4": {
+            "Tesda\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TesdaTest\\": "test/"
+        }
+    },
     "require": {
-        "php": "^7.0"        
+        "php": "^7.0",
+        "roave/security-advisories": "dev-master",
+        "zendframework/zend-hydrator": "^2.2.1"
     },
     "require-dev": {
-        "zendframework/zend-test": "^3.0.1"
+        "zendframework/zend-test": "^3.0.1",
+        "squizlabs/php_codesniffer": "^2.6.2",
+        "phpbench/phpbench": "^0.11.2",
+        "sebastian/phpcpd": "^2.0.4"
     },
     "extra": {
-        
+        "zf": {
+            "module": "Employee\\Api",
+            "config-provider": "Employee\\Api\\ConfigProvider"
+        }
     },
-    "script": {}
+    "script": {
+        "post-install-cmd": [
+            "@show-me-the-bugs"
+        ],
+        "post-update-cmd": [
+            "@show-me-the-bugs"
+        ],
+        "show-me-the-bugs": [
+            "@cs",
+            "@cpd",
+            "@test"
+        ],
+        "cs": "phpcs --ignore=/vendor,/build ",
+        "cs-fix": "phpcbf --ignore=/vendor,/build ",
+        "test": "phpunit --verbose",
+        "cpd": "phpcpd --exclude=vendor --names-exclude=ConfigProvider.php,Module.php --fuzzy src",
+        "test": "phpunit --verbose"
+    }
 }
