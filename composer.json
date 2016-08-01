@@ -1,0 +1,16 @@
+{
+    "name": "codingmatters/employee-service-repository",
+    "authors": [
+        
+    ],
+    "require": {
+        "php": "^7.0"        
+    },
+    "require-dev": {
+        "zendframework/zend-test": "^3.0.1"
+    },
+    "extra": {
+        
+    },
+    "script": {}
+}
