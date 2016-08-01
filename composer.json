@@ -10,12 +10,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Tesda\\": "src/"
+            "Employee\\Api\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "TesdaTest\\": "test/"
+            "EmployeeTest\\Api\\": "test/"
         }
     },
     "require": {
