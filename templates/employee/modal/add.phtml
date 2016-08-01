@@ -1,0 +1,79 @@
+<?php
+    $this->headLink()->prependStylesheet($this->basePath('assets/jquery-ui/themes/black-tie/jquery-ui.min.css'));
+    $this->inlineScript()->prependFile($this->basePath('assets/academe/js/modal.js'));
+?>
+
+<div id="dialog-form" title="Add employee">
+    <p>All fields are required. </p>
+    <form>
+        <div class="container-fluid">
+            <div class="row">
+                <h3 class="bold" style="color:#000">Personal Information</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Middle Initial</th>
+                            <th>Lastname</th>
+                            <th>Gender</th>
+                            <th>Birthday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" name="firstname" /></td>
+                            <td><input type="text" name="middlename" /></td>
+                            <td><input type="text" name="lastname" /></td>
+                            <td>
+                                <select name="gender">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </td>
+                            <td><input type="text" name="birthdate" id="birthdate" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="divider"><br></div>
+            <div class="row">
+                <h3 class="bold" style="color:#000">Work Information</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Department</th>
+                            <th>Position</th>
+                            <th>Status</th>
+                            <th>Date Employed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <select name="department">
+                                    <option value="IT Department">IT Department</option>
+                                    <option value="CS Department">CS Department</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="position">
+                                    <option value="#">IT Chairman</option>
+                                    <option value="#">IT Assistant Chairman</option>
+                                    <option value="#">CS Chairman</option>
+                                    <option value="#">CS Assistant Chairman</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="employement_status">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </td>
+                            <td><input type="text" name="date-employed" id="date-employed" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+</div>

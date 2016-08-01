@@ -1,0 +1,63 @@
+<?php $this->headTitle('Employees');  ?>
+
+<h3>Employees</h3>
+<p>List of MSU-Naawan employees.</p>
+<br>
+<div class="inline-block">
+    <form class="form form-group">
+        <label>Department:</label>
+        <select name="dept">
+            <option value="all">All</option>
+            <option value="IT Department">IT Department</option>
+            <option value="CS Department">CS Department</option>
+        </select>
+        <input type="submit" value="Show" />   
+    </form>
+    <button class="button btn-flat" id="add-employee">Add</button>
+    <div class="pull-right">
+        <form class="form form-group">
+            <input placeholder="Last Name" type="text" name="last_name"/>
+            <input type="submit" value="Search" />
+        </form>
+    </div>
+</div>
+<?php if (isset($this->employees) && is_array($this->employees)) : ?>
+<div class="container-fluid">
+    <div class="row">
+        <table class="table table-responsive table-bordered">
+            <thead>
+                <tr>
+                    <th>Employee</th>
+                    <th>Department</th>
+                    <th>Position</th>
+                    <th>Information</th>
+                    <th>Filed Leave</th>
+                    <th>Account</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php 
+                    if (count($this->employees) > 0) :
+                        foreach ($this->employees as $employee) :
+                ?>
+                <tr>
+                    <td><?=$employee['first_name'] . " " . $employee['last_name']?></td>
+                    <td><?=$employee['department']?></td>
+                    <td><?=$employee['position']?></td>
+                    <td>Edit</td>
+                    <td>View</td>
+                    <td>View</td>
+                </tr>
+                    <?php endforeach; ?>
+                <?php else : ?>
+                <tr>
+                    <td colspan="6" class="center">You have no employee list available.</td>
+                </tr>
+                <?php endif; ?>
+            </tbody>
+        </table> 
+    </div>
+</div>
+<?php endif; ?>
+
+<?php echo $this->partial('new-employee'); ?>
