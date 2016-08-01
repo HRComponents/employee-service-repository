@@ -1,6 +1,7 @@
 {
     "name": "codingmatters/employee-service-repository",
     "type": "project",
+    "license": "MIT",
     "authors": [
         {
             "name": "Gab Amba",
