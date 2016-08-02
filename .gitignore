@@ -1,5 +1,6 @@
 # Composer files
 composer.phar
+composer.lock
 vendor/
 
 # Local configs
@@ -25,3 +26,4 @@ nbproject
 .idea
 .project
 .settings
+build
