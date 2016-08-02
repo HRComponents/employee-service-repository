@@ -36,7 +36,7 @@
             "config-provider": "Employee\\Api\\ConfigProvider"
         }
     },
-    "script": {
+    "scripts": {
         "post-install-cmd": [
             "@show-me-the-bugs"
         ],
@@ -50,7 +50,6 @@
         ],
         "cs": "phpcs --ignore=/vendor,/build ",
         "cs-fix": "phpcbf --ignore=/vendor,/build ",
-        "test": "phpunit --verbose",
         "cpd": "phpcpd --exclude=vendor --names-exclude=ConfigProvider.php,Module.php --fuzzy src",
         "test": "phpunit --verbose"
     }
