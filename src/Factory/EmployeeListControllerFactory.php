@@ -24,12 +24,12 @@
  * THE SOFTWARE.
  */
 
-namespace Employee\Factory;
+namespace Employee\Api\Factory;
 
 use Zend\ServiceManager\Factory\FactoryInterface;
 use Interop\Container\ContainerInterface;
-use Employee\Controller\PageController;
-use Employee\Service\EmployeeListService;
+use Employee\Api\Controller\PageController;
+use Employee\Api\Service\EmployeeListService;
 
 class EmployeeListControllerFactory implements FactoryInterface
 {

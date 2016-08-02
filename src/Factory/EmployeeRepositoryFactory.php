@@ -24,7 +24,7 @@
  * THE SOFTWARE.
  */
 
-namespace Employee\Factory;
+namespace Employee\Api\Factory;
 
 use Zend\ServiceManager\Factory\FactoryInterface;
 use Interop\Container\ContainerInterface;

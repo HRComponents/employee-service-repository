@@ -24,7 +24,7 @@
  * THE SOFTWARE.
  */
 
-namespace Employee\Model;
+namespace Employee\Api\Model;
 
 class EmployeeRepository
 {

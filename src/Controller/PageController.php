@@ -24,11 +24,11 @@
  * THE SOFTWARE.
  */
 
-namespace Employee\Controller;
+namespace Employee\Api\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
-use Employee\Service\EmployeeListService;
+use Employee\Api\Service\EmployeeListService;
 
 class PageController extends AbstractActionController
 {
