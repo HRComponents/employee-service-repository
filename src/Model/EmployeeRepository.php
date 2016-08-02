@@ -62,28 +62,28 @@ class EmployeeRepository
             'department'    => 'CS Department'
         ],
     ];
-    
+
     public function fetchAll()
     {
         return $this->employees;
     }
-    
+
     public function fetchByLastName($last_name = null)
     {
         if (is_null($last_name)) {
             return $this->fetchAll();
         }
-        
+
         $list = [];
         foreach ($this->employees as $employee) {
             if ($last_name === $employee['last_name']) {
                 $list[] = $employee;
             }
         }
-        
+
         return $list;
     }
-    
+
     public function fetchAllByDepartment($department = null)
     {
         $list = [];
@@ -92,7 +92,7 @@ class EmployeeRepository
                 $list[] = $employee;
             }
         }
-        
+
         return $list;
     }
 }

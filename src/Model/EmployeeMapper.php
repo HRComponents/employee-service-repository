@@ -28,5 +28,5 @@ namespace Employee\Model;
 
 class EmployeeMapper
 {
-    
+
 }

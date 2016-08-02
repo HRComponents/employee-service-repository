@@ -34,21 +34,21 @@ class PageController extends AbstractActionController
 {
     private $data = [];
     private $masterlist;
-    
+
     public function __construct(EmployeeListService $list)
     {
         $this->masterlist = $list;
     }
-    
+
     public function indexAction()
     {
         $department = $this->params()->fromQuery('dept');
-        $last_name  = $this->params()->fromQuery('last_name');        
-        
+        $last_name  = $this->params()->fromQuery('last_name');
+
         if (isset($last_name) && !empty($last_name)) {
             $this->data['employees'] = $this->masterlist->fetchByLastName($last_name);
         }
-        
+
         if (isset($department) && !empty($department)) {
             if ('all' !== $department) {
                 $this->data['employees'] = $this->masterlist->fetchEmployeesByDepartment($department);
@@ -56,7 +56,7 @@ class PageController extends AbstractActionController
                 $this->data['employees'] = $this->masterlist->listAllEmployees();
             }
         }
-        
+
         return new ViewModel($this->data);
     }
 }

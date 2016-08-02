@@ -31,17 +31,17 @@ use Employee\Model\EmployeeRepository;
 final class EmployeeListService
 {
     private $list;
-    
+
     public function __construct(EmployeeRepository $repository)
     {
         $this->list = $repository;
     }
-    
+
     public function listAllEmployees()
     {
         return $this->list->fetchAll();
     }
-    
+
     public function fetchEmployeesByDepartment($department)
     {
         return $this->list->fetchAllByDepartment($department);
