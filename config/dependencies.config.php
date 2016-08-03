@@ -6,9 +6,9 @@
  * @see https://zendframework.github.io/zend-servicemanager/configuring-the-service-manager/
  */
 
-use Employee\Api\Service\EmployeeListService;
-use Employee\Api\Model\EmployeeRepository;
-use Employee\Api\Factory;
+use Employee\Service\EmployeeListService;
+use Employee\Model\EmployeeRepository;
+use Employee\Factory;
 
 return [
     'invokables'            => [],
