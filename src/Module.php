@@ -24,7 +24,7 @@
  * THE SOFTWARE.
  */
 
-namespace Employee\Api;
+namespace Employee;
 
 class Module
 {

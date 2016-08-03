@@ -24,7 +24,7 @@
  * THE SOFTWARE.
  */
 
-namespace Employee\Api\Model;
+namespace Employee\Model;
 
 class EmployeeEntity
 {

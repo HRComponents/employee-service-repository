@@ -24,11 +24,11 @@
  * THE SOFTWARE.
  */
 
-namespace Employee\Api\Factory;
+namespace Employee\Factory;
 
 use Zend\ServiceManager\Factory\FactoryInterface;
 use Interop\Container\ContainerInterface;
-use Employee\Api\Model\EmployeeRepository;
+use Employee\Model\EmployeeRepository;
 
 class EmployeeListServiceFactory implements FactoryInterface
 {

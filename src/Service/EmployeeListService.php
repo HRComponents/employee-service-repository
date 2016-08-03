@@ -24,9 +24,9 @@
  * THE SOFTWARE.
  */
 
-namespace Employee\Api\Service;
+namespace Employee\Service;
 
-use Employee\Api\Model\EmployeeRepository;
+use Employee\Model\EmployeeRepository;
 
 final class EmployeeListService
 {
