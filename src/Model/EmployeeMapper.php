@@ -24,7 +24,7 @@
  * THE SOFTWARE.
  */
 
-namespace Employee\Model;
+namespace CodingMatters\Employee\Model;
 
 class EmployeeMapper
 {

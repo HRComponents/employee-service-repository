@@ -10,9 +10,14 @@
         }
     ],
     "autoload": {
-        "classmap": [
-            "./src/Module.php"
-        ]
+        "psr-4": {
+            "CodingMatters\\Employee\\": "src/"
+        }
+    },
+    "autoload-dev": {
+	"psr-4": {
+	    "CodingMatters\\EmployeeTest\\": "test/"
+	}
     },
     "require": {
         "php": "^7.0",

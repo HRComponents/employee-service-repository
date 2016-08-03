@@ -24,7 +24,7 @@
  * THE SOFTWARE.
  */
 
-namespace Employee;
+namespace CodingMatters\Employee;
 
 class ConfigProvider
 {
