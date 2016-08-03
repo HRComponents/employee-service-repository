@@ -38,12 +38,6 @@ class ConfigProvider
         return [
             "middleware_pipeline"   => $this->getMiddlewareConfig(),
             "dependencies"          => $this->getDependencyConfig(),
-            "controllers"           => $this->getControllerConfig(),
-            "controller_plugins"    => $this->getControllerPluginConfig(),
-            "navigation"            => $this->getNavigationConfig(),
-            "routes"                => $this->getRouteConfig(),
-            $this->getTemplateConfig(),
-            $this->getGlobConfig()
         ];
     }
 
@@ -58,26 +52,6 @@ class ConfigProvider
     }
 
     /**
-     * Return templates mapping for this module.
-     *
-     * @return array
-     */
-    public function getTemplateConfig()
-    {
-        return include __DIR__ . "/../config/templates.config.php";
-    }
-
-    /**
-     * Return routes mapping for this module.
-     *
-     * @return array
-     */
-    public function getRouteConfig()
-    {
-        return include __DIR__ . "/../config/routes.config.php";
-    }
-
-    /**
      * Return middlewares mapping for this module.
      *
      * @return array
@@ -85,45 +59,5 @@ class ConfigProvider
     public function getMiddlewareConfig()
     {
         return include __DIR__ . "/../config/middleware.config.php";
-    }
-
-    /**
-     * Return navigation mapping for this module.
-     *
-     * @return array
-     */
-    public function getNavigationConfig()
-    {
-        return include __DIR__ . "/../config/navigation.config.php";
-    }
-
-    /**
-     * Return Glob configuration for this module.
-     *
-     * @return array
-     */
-    public function getGlobConfig()
-    {
-        return include __DIR__ . "/../config/glob.config.php";
-    }
-
-    /**
-     * Return controllers mapping for this module.
-     *
-     * @return array
-     */
-    public function getControllerConfig()
-    {
-        return include __DIR__ . "/../config/controllers.config.php";
-    }
-
-    /**
-     * Return controller-plugins mapping for this module.
-     *
-     * @return array
-     */
-    public function getControllerPluginConfig()
-    {
-        return include __DIR__ . "/../config/controller-plugins.config.php";
     }
 }
