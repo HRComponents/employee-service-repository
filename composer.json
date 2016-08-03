@@ -19,6 +19,12 @@
 	    "CodingMatters\\EmployeeTest\\": "test/"
 	}
     },
+    "extra": {
+        "zf": {
+            "module": "CodingMatters\\Employee",
+            "config-provider": "CodingMatters\\Employee\\ConfigProvider"
+        }
+    },
     "require": {
         "php": "^7.0",
         "roave/security-advisories": "dev-master",
