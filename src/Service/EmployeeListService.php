@@ -26,7 +26,7 @@
 
 namespace CodingMatters\Employee\Service;
 
-use Employee\Model\EmployeeRepository;
+use CodingMatters\Employee\Model\EmployeeRepository;
 
 final class EmployeeListService
 {
