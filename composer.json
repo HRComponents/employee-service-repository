@@ -1,6 +1,6 @@
 {
     "name": "codingmatters/employee-service-repository",
-    "type": "project",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
@@ -10,14 +10,9 @@
         }
     ],
     "autoload": {
-        "psr-4": {
-            "Employee\\Api\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "EmployeeTest\\Api\\": "test/"
-        }
+        "classmap": [
+            "./src/Module.php"
+        ]
     },
     "require": {
         "php": "^7.0",
@@ -29,12 +24,6 @@
         "squizlabs/php_codesniffer": "^2.6.2",
         "phpbench/phpbench": "^0.11.2",
         "sebastian/phpcpd": "^2.0.4"
-    },
-    "extra": {
-        "zf": {
-            "module": "Employee\\Api",
-            "config-provider": "Employee\\Api\\ConfigProvider"
-        }
     },
     "scripts": {
         "post-install-cmd": [
