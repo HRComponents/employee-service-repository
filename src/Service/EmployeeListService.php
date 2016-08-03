@@ -24,7 +24,7 @@
  * THE SOFTWARE.
  */
 
-namespace Employee\Service;
+namespace CodingMatters\Employee\Service;
 
 use Employee\Model\EmployeeRepository;
 
