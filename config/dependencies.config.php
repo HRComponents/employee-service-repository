@@ -6,15 +6,15 @@
  * @see https://zendframework.github.io/zend-servicemanager/configuring-the-service-manager/
  */
 
-use CodingMatters\Employee\Service\EmployeeListService;
+use CodingMatters\Employee\Service\EmployeeListServiceInterface;
 use CodingMatters\Employee\Model\EmployeeRepository;
 use CodingMatters\Employee\Factory;
 
 return [
     'invokables'            => [],
     'factories'             => [
-        EmployeeRepository::class   => Factory\EmployeeRepositoryFactory::class,
-        EmployeeListService::class => Factory\EmployeeListServiceFactory::class
+        EmployeeRepositoryInterface::class      => Factory\EmployeeRepositoryFactory::class,
+        EmployeeListServiceInterface::class     => Factory\EmployeeListServiceFactory::class
     ],
     'services'              => [],
     'abstract_factories'    => [],

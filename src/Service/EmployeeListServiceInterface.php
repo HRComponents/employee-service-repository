@@ -24,16 +24,13 @@
  * THE SOFTWARE.
  */
 
-namespace CodingMatters\Employee\Factory;
+namespace CodingMatters\Employee\Service;
 
-use Zend\ServiceManager\Factory\FactoryInterface;
-use Interop\Container\ContainerInterface;
-use CodingMatters\Employee\Model\EmployeeRepositoryInterface;
-
-class EmployeeListServiceFactory implements FactoryInterface
+interface EmployeeListServiceInterface
 {
-    public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
-    {
-        return new $requestedName($container->get(EmployeeRepositoryInterface::class));
-    }
+    public function listAllEmployees();
+
+    public function fetchEmployeesByDepartment($department);
+
+    public function fetchByLastName($last_name);
 }

@@ -26,7 +26,7 @@
 
 namespace CodingMatters\Employee\Model;
 
-class EmployeeRepository
+class EmployeeRepository implements EmployeeRepositoryInterface
 {
     private $employees = [
         [

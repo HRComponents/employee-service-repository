@@ -26,29 +26,29 @@
 
 namespace CodingMatters\Employee\Service;
 
-use CodingMatters\Employee\Model\EmployeeRepository;
+use CodingMatters\Employee\Model\EmployeeRepositoryInterface;
 
-final class EmployeeListService
+final class EmployeeListService implements EmployeeListServiceInterface
 {
-    private $list;
+    private $repository;
 
-    public function __construct(EmployeeRepository $repository)
+    public function __construct(EmployeeRepositoryInterface $repository)
     {
-        $this->list = $repository;
+        $this->repository = $repository;
     }
 
     public function listAllEmployees()
     {
-        return $this->list->fetchAll();
+        return $this->repository->fetchAll();
     }
 
     public function fetchEmployeesByDepartment($department)
     {
-        return $this->list->fetchAllByDepartment($department);
+        return $this->repository->fetchAllByDepartment($department);
     }
 
     public function fetchByLastName($last_name)
     {
-        return $this->list->fetchByLastName($last_name);
+        return $this->repository->fetchByLastName($last_name);
     }
 }
