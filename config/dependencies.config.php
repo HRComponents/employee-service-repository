@@ -7,7 +7,7 @@
  */
 
 use CodingMatters\Employee\Service\EmployeeListServiceInterface;
-use CodingMatters\Employee\Model\EmployeeRepository;
+use CodingMatters\Employee\Model\EmployeeRepositoryInterface;
 use CodingMatters\Employee\Factory;
 
 return [
